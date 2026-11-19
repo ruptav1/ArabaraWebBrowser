@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arabara</title>
+<meta name="description" content="Download Arabara, a personal web terminal for Windows built on WebView2.">
+<meta name="theme-color" content="#050505">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="wave" class="backdrop" aria-hidden="true"></canvas>
+
+<main>
+  <section class="hero">
+    <div class="hero-brand">
+      <svg class="mark mark-wide" viewBox="0 0 1111 880" preserveAspectRatio="none" aria-hidden="true">
+        <use href="#mark"/>
+      </svg>
+      <p class="hero-name" role="heading" aria-level="1">ARABARA</p>
+      <p class="hero-kind">LIGHT WEB BROWSER</p>
+    </div>
+    <div class="actions">
+      <a class="button primary" href="downloads/Arabara-0.7.1.zip" download>[ DOWNLOAD 0.7.1 ]</a>
+      <a class="button" href="changelog.html">[ CHANGELOG ]</a>
+      <a class="button" href="https://github.com/ruptav1/ArabaraWebBrowser" rel="noopener">[ GITHUB ]</a>
+    </div>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="name">
+    <div class="lockup">
+      <svg class="mark mark-small" viewBox="0 0 1111 880" preserveAspectRatio="none" aria-hidden="true"><use href="#mark"/></svg>
+      <div>
+        <h2 id="name" class="wordmark">ARABARA</h2>
+        <p class="tagline">PERSONAL WEB TERMINAL // HTTPS ONLY // NO SEARCH</p>
+      </div>
+    </div>
+
+    <div class="notice">
+      <p class="purpose">ARABARA IS NOT MADE FOR MULTITASKING, RESEARCH OR SEARCHING THE WEB. IT EXISTS FOR ONE JOB: RUNNING WEBSITES AS LIGHT AND AS STABLE AS POSSIBLE WHILE YOU ARE GAMING.</p>
+      <p class="paste">PASTE A LINK.<br>OR TYPE THE DOMAIN.</p>
+      <p class="how">There is no search box. Type the address you want, for example <b>youtube.com</b>, <b>discord.com</b> or <b>music.youtube.com</b>, or paste a link you copied. Need to look something up? Type <b>google.com</b> and search there.</p>
+    </div>
+
+    <div class="spec">
+      <h2>RELEASE</h2>
+      <p>Arabara 0.7.1, built 2026-11-20.<br>
+      <span id="package">Arabara-0.7.1.zip, 535 KB; 10 files, 1.6 MB when extracted</span>. No installer: extract and run Arabara.exe.<br>
+      SHA-256: <span id="sha">22337E399E3741A4CBCC1BEA6608DF316A5F45091B95443E92267D047D8C108E</span></p>
+
+      <h2>REQUIRED</h2>
+      <p>Windows 11, any version, or Windows 10 version 1607 (build 14393) or newer. 64-bit Windows only.<br>
+      Tested on Windows 11 Pro, build 26200.</p>
+      <p>A 64-bit (x64) Intel or AMD processor. Windows on ARM is not tested.</p>
+      <p>.NET Framework 4.8 or 4.8.1. Included with Windows 10 version 1903 and newer and with Windows 11; earlier Windows 10 versions need the free installer from Microsoft.</p>
+      <p>Microsoft Edge WebView2 Runtime (Evergreen), version 154.0.4258 or newer. Tested with 154.0.4258.62; built with the WebView2 SDK 1.0.4258.31. The runtime is part of Windows 11 and updates itself; on Windows 10 it can be installed from <a href="https://developer.microsoft.com/microsoft-edge/webview2/" rel="noopener">Microsoft</a>.</p>
+      <p>Memory: 4 GB of RAM at least, 8 GB recommended. Arabara itself uses about 100 MB; each website adds its own, and the music player adds about 150 to 250 MB while it plays and gives it back a minute after it stops. Tabs left in the background release their memory after a minute.</p>
+      <p>Disk: 2 MB for the program. History, sign-ins and settings are kept in %LOCALAPPDATA%\Arabara and grow with use.</p>
+      <p>Display: a window of at least 800 x 480; 1280 x 720 or larger recommended. High-DPI screens are supported.</p>
+      <p>Network: an internet connection. Arabara opens HTTPS addresses only. Twice a day it asks GitHub whether a newer version is out; when one is, UPDATE appears in the toolbar and installs it after you confirm.</p>
+
+      <h2>FOR SOME FEATURES</h2>
+      <p>Music: a YouTube Music account, free or Premium, signed in once at music.youtube.com inside Arabara.</p>
+      <p>SOUND WAVE background: an active audio output device; it follows what that device plays.</p>
+      <p>RINGS background: moves with the music terminal's music. On Windows 11 it hears only Arabara's own sound, so games and other apps never move it; on Windows 10 it follows what the output device plays.</p>
+      <p>Ad blocking: uBlock Origin Lite (free), not included in the download. Get <b>uBOLite_&lt;version&gt;.edge.zip</b> from its <a href="https://github.com/uBlockOrigin/uBOL-home/releases" rel="noopener">GitHub releases</a> and extract it into %LOCALAPPDATA%\Arabara\extensions\ublock-lite (the folder that holds manifest.json), then start Arabara.</p>
+      <p>Discord tab streaming: Discord open in an Arabara tab.</p>
+
+      <h2>FIRST RUN</h2>
+      <p>Arabara is not code-signed yet, so Windows may show "Windows protected your PC". Choose More info, then Run anyway.</p>
+    </div>
+  </section>
+
+  <section class="spin" id="spin" aria-label="Spinning Arabara mark">
+    <canvas id="mark3d" aria-hidden="true"></canvas>
+  </section>
+</main>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="markInk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff465c"/>
+      <stop offset="1" stop-color="#961022"/>
+    </linearGradient>
+    <pattern id="markStripes" width="1111" height="36" patternUnits="userSpaceOnUse">
+      <rect width="1111" height="24" fill="#fff"/>
+    </pattern>
+    <mask id="markMask">
+      <rect width="1111" height="880" fill="url(#markStripes)"/>
+      <polygon fill="#000" points="109,776 1001,776 967,723 141,723"/>
+      <polygon fill="#000" points="-400,588 410,588 443,540 -400,540"/>
+      <polygon fill="#000" points="698,588 1500,588 1500,540 665,540"/>
+      <polygon fill="#000" points="397,686 712,686 552,441"/>
+      <polygon fill="#000" points="345,403 761,403 728,351 378,351"/>
+    </mask>
+    <g id="mark"><polygon points="0,880 1111,880 549,0" fill="url(#markInk)" mask="url(#markMask)"/></g>
+  </defs>
+</svg>
+<script src="wave.js"></script>
+<script src="mark.js"></script>
+</body>
+</html>

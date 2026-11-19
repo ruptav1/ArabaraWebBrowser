@@ -1,0 +1,20 @@
+.packages/
+bin/
+bin-*/
+test-results/
+.test-profile/
+.test-profile-frame/
+.test-profile-capture/
+.bench-profile/
+*.user
+*.lnk
+*.old
+
+# Kept on this machine only
+backups/
+releases/
+.claude/
+site/downloads/*.zip
+
+# Free for personal use only, so not published; the build and Arabara work without it.
+assets/fonts/Skynet College.ttf

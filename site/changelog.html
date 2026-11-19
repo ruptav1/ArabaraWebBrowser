@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arabara Changelog</title>
+<meta name="description" content="Everything that changed in each Arabara release.">
+<meta name="theme-color" content="#050505">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="wave" class="backdrop" aria-hidden="true"></canvas>
+
+<main class="log">
+  <nav><a class="button" href="index.html">[ &lt; BACK ]</a> <a class="button primary" href="downloads/Arabara-0.7.1.zip" download>[ DOWNLOAD 0.7.1 ]</a></nav>
+  <h1>CHANGELOG</h1>
+
+  <article>
+    <h2>0.7.1 <span class="date">2026-11-20 // CURRENT</span></h2>
+
+    <h3>UPDATES</h3>
+    <ul>
+      <li>Arabara checks GitHub for a newer version a minute after it starts and then every 12 hours. When one is out, UPDATE and its version appear in red at the right of the toolbar.</li>
+      <li>Click it and confirm: Arabara downloads the new version, checks it against the checksum GitHub records, replaces its own files and restarts. History, sign-ins and settings are kept; if anything goes wrong, the old version is put back.</li>
+      <li>Arabara's source code and every release are on <a href="https://github.com/ruptav1/ArabaraWebBrowser" rel="noopener">GitHub</a>.</li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>0.7.0 <span class="date">2026-10-12</span></h2>
+
+    <h3>RINGS</h3>
+    <ul>
+      <li>New background: rings of ARABARA text turning in 3D around the middle, their letters standing along each ring, mirrored and dimmer on the far side.</li>
+      <li>Four large oval rings sit at the corners, their tips pointing at the middle, turned a little in 3D; only their text moves, growing as it comes near.</li>
+      <li>Behind them, a dark wall of rock seen from below, made of triangles large and small in different shades, keeps coming slowly down towards you.</li>
+      <li>With the music terminal playing, every beat throws the rings forward: their text jumps to six times its speed and eases back within a third of a beat, and the wall slides faster. Every 8 bars one more ring writes itself in, up to six.</li>
+      <li>In view-only mode ([ HIDE UI ], music terminal closed), press anywhere and move the mouse to run the text faster: the faster you move, the faster it runs, picking up and slowing down smoothly.</li>
+      <li>Switching between MARK + SEA, SOUND WAVE and RINGS decodes the page cell by cell, with a scramble of glyphs, instead of fading.</li>
+    </ul>
+
+    <h3>CALLS AND KEEP ALIVE</h3>
+    <ul>
+      <li>Calls are recognised: a tab in a voice call, such as a Discord voice channel, is never frozen or reloaded, even while everyone is silent. Before, a quiet call in the background could be reloaded after a minute.</li>
+      <li>KEEP ALIVE is light now: the tab still never freezes or reloads, but while you are not looking at it, it is not drawn and holds little memory. On Discord's sign-in page that is 90 to 100 MB instead of 250 to 330 MB.</li>
+      <li>The KEEP ALIVE button says why a tab is kept running: KEPT ALIVE, IN CALL, MIC / CAM or SHARING.</li>
+    </ul>
+
+    <h3>LONG SESSIONS</h3>
+    <ul>
+      <li>The start page gives back the memory of a background it no longer draws: in a 75-minute run it stayed between 41 and 67 MB, where it used to climb to 210 MB.</li>
+      <li>The music keeps playing: if YouTube Music leaves a track paused on its own, Arabara starts it again. Once its hidden player page is 6 hours old, it is opened afresh at the next track change, so nights of music stay light.</li>
+      <li>The music terminal draws once a second while it is behind other windows.</li>
+    </ul>
+
+    <h3>LOOK AND FEEL</h3>
+    <ul>
+      <li>Slimmer tab strip and toolbar: narrower tabs and lower buttons and address bar leave more room for the page.</li>
+      <li>The switches at the bottom (YT, VISUALS, LOW RAM, MEMORY) are plain text; a value in red is on.</li>
+      <li>New app icon: the crimson triangle on a charcoal tile, clear on dark and light taskbars.</li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>0.6.0 <span class="date">2026-10-08</span></h2>
+
+    <h3>LIGHTER</h3>
+    <ul>
+      <li>Tabs left in the background are frozen after 1 minute instead of 15 (20 seconds instead of 3 minutes when Windows is short of memory): their page is released and loads again when you open the tab. Tabs playing sound, in a call, downloading or set to Keep alive are never frozen.</li>
+      <li>When Arabara has been minimized, or behind other windows with VISUALS:AUTO, for 5 minutes, the tab shown is frozen the same way and loads again as soon as you come back.</li>
+      <li>The music player gives back its hidden YouTube Music page, about as much memory as a YouTube Music tab, a minute after the music stops while the music terminal is closed. Play picks up where it was, after any ad.</li>
+    </ul>
+
+    <h3>AD BLOCKING</h3>
+    <ul>
+      <li>With uBlock Origin Lite extracted into %LOCALAPPDATA%\Arabara\extensions\ublock-lite, ads and trackers are blocked on every site, Vietnamese ones included (ABPVN list). It is free and not part of the download; see the README in the zip.</li>
+      <li>The Arabara mark at the right of the address box shows it: crimson while ads are blocked on the site shown. Click it to allow ads on that site (it turns grey), and again to block them. The page reloads.</li>
+      <li>On ad-heavy news sites the pages used about a third less CPU and 130 MB less memory, in half as many processes.</li>
+    </ul>
+
+    <h3>MUSIC</h3>
+    <ul>
+      <li>Two thin music lines frame the page, under the address bar and above the bottom buttons. They shoot out on each beat and fall back between beats, like level meters.</li>
+      <li>Fixed: a track picked in the middle of a playlist went on to the playlist's first track afterwards; it now continues in order.</li>
+    </ul>
+
+    <h3>START PAGE</h3>
+    <ul>
+      <li>Backgrounds: MARK + SEA and SOUND WAVE. VIDEO LOOP and PICTURE are no longer part of the download.</li>
+      <li>In view-only mode ([ HIDE UI ], music terminal closed) the background takes the mouse: drag the spinning mark to turn it by hand, and on SOUND WAVE move the cursor over the water to push it.</li>
+      <li>The side code columns keep the same size on every background.</li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>0.5.0 <span class="date">2026-10-07</span></h2>
+
+    <h3>PICTURE</h3>
+    <ul>
+      <li>New background: a still picture of your choice (right-click the logo and pick a JPEG, PNG, BMP, GIF or TIFF), drawn as ASCII a little smaller than the page with soft edges. Only the file path is saved.</li>
+      <li>The character is cut out of the picture automatically and drawn in front in much finer characters, in tones that keep hair, skin and shading apart even in pastel artwork.</li>
+      <li>It breathes: the chest rises, the head lifts, the knees rock and hanging hair sways after each breath. If its eyes are found, it blinks every few seconds.</li>
+      <li>Light drifts slowly across the background and the picture's sparkles flare now and then.</li>
+      <li>The cut-out takes a few seconds the first time a picture is used, in the background at low priority; it is remembered, so later starts take about a second.</li>
+    </ul>
+
+    <h3>SOUND WAVE</h3>
+    <ul>
+      <li>The music is listened to properly: kicks, snares and hi-hats are told apart, the tempo is found and held steady, and the beat is followed even when the kick is buried.</li>
+      <li>Drops and bridges are recognised: at a drop each kick throws up pyramid peaks across about half of the wave; in a bridge only a few rise.</li>
+      <li>Peaks jump on the hit and fall back in about a sixth of a second.</li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>0.4.2 <span class="date">2026-10-06</span></h2>
+
+    <h3>START PAGE</h3>
+    <ul>
+      <li>The start page is a terminal: a MAIN TERMINAL panel with the striped mark and the ARABARA wordmark, boot lines, and RECENT, SYSTEM and KEYMAP panels.</li>
+      <li>The Arabara mark spins behind it as a 3D ASCII solid, turning about all three axes at even speeds, over a faint crimson 3D ASCII sea.</li>
+      <li>On wide windows the side columns print live code from the animation, alternating between pauses, normal runs and fast bursts.</li>
+      <li>Typewriter boot lines, a spinner for pending status and a blinking address cursor.</li>
+      <li>[ HIDE UI ] decays the interface away from the centre outwards with red and white glitch characters, leaving only the animation; [ SHOW UI ] brings it back the same way.</li>
+      <li>Click the logo to change the background scene, with a fade: MARK + SEA, SOUND WAVE or VIDEO LOOP (PICTURE from 0.5.0). The choice is remembered.</li>
+      <li>The animation only runs while the start page is visible in the active window, and a hidden start page frees its frame buffers.</li>
+    </ul>
+
+    <h3>SOUND WAVE</h3>
+    <ul>
+      <li>New background: an ASCII wireframe sea seen from above, a diamond lattice drawn as continuous strokes (- _ / \ | x).</li>
+      <li>The water moves with whatever is playing: the bass swells the big wave and the spectrum lifts the water, bass in the middle and treble at the sides, with a quick rise and a soft fall so it jumps on the beat without trembling.</li>
+      <li>Sound comes from a loopback of the default output device, analysed in memory only and never recorded; capture stops when the scene is not shown.</li>
+    </ul>
+
+    <h3>VIDEO LOOP</h3>
+    <ul>
+      <li>New background: a video of your choice (right-click the logo), muted and looping, drawn as ASCII with shape-aware characters so edges keep their direction. Only the file path is saved.</li>
+      <li>Videos with a still figure over a moving background are drawn as two layers: the figure is cut out automatically, drawn in much finer characters in its own tones, and breathes gently.</li>
+      <li>Bright videos are inverted so the page stays dark.</li>
+    </ul>
+
+    <h3>MUSIC</h3>
+    <ul>
+      <li>New [ MUSIC ] terminal on the start page for YouTube Music: your saved playlists and their tracks, using the account you already signed in with.</li>
+      <li>An ASCII record that spins at 33 1/3 while music plays.</li>
+      <li>Previous, back 10 s, play/pause, forward 10 s, next, repeat off / all / one, a draggable volume bar and a clickable progress bar. Keys: Space, arrows, Esc.</li>
+      <li>THEME makes a playlist the start page's background music: it plays while a start page is shown and pauses when you leave it.</li>
+      <li>YouTube Music plays the playlist with its own queue, so lengths and order match the website. Repeat off stops after the last track.</li>
+      <li>EJECT stops the music and frees its memory. The terminal opens and closes with the same decay as HIDE UI.</li>
+    </ul>
+
+    <h3>STREAMING</h3>
+    <ul>
+      <li>Share a single tab to Discord: the tab is streamed without your cursor or other windows and keeps running at full speed while you look elsewhere.</li>
+      <li>Closing the shared tab ends the share.</li>
+    </ul>
+
+    <h3>LOCAL FILES</h3>
+    <ul>
+      <li>Type a drive or a path such as D:\ to browse folders in a terminal-style view; images, video, PDF and text open in place.</li>
+    </ul>
+
+    <h3>MEMORY AND SPEED</h3>
+    <ul>
+      <li>Low RAM: tabs idle in the background for 15 minutes are frozen and their page released; under memory pressure this happens after 3 minutes.</li>
+      <li>Tabs playing audio, using the microphone or camera, downloading, streaming or marked KEEP ALIVE are never frozen or throttled.</li>
+      <li>YT:LIGHT asks YouTube for H.264 video, which decodes with less CPU; on by default.</li>
+    </ul>
+
+    <h3>LOOK AND FEEL</h3>
+    <ul>
+      <li>New logo: the original Arabara triangle, flipped to point up, stretched wide and filled with thin stripes; it replaces the wordmark at the top left.</li>
+      <li>The ARABARA wordmark is set wide and cut by the same stripes.</li>
+      <li>Startup intro: the logo and title decay into ASCII from the centre outwards, then the interface fades in.</li>
+      <li>Custom title bar, a darker charcoal and crimson palette, and the window opens maximized.</li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>0.3.3 <span class="date">2026-10-05</span></h2>
+    <ul>
+      <li>New emblem: a sharp upright crimson triangle with horizontal grooves and a triangular opening.</li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>0.3.2 <span class="date">2026-10-05</span></h2>
+    <ul>
+      <li>New crimson logo and Windows icon.</li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>0.3.1</h2>
+    <ul>
+      <li>Compact terminal-style button labels.</li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>0.3.0</h2>
+    <ul>
+      <li>VISUALS AUTO: when you switch to another application, the visible page stops rendering and a "Rendering paused" panel takes its place; returning restores the page without reloading. VISUALS LIVE turns this off.</li>
+      <li>Pausing rendering never interrupts audio, calls, downloads or tabs kept alive.</li>
+    </ul>
+  </article>
+</main>
+<script src="wave.js"></script>
+</body>
+</html>
