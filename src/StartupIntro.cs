@@ -344,6 +344,18 @@ namespace Arabara
             File.WriteAllText(Path.Combine(folder, "intro-test.txt"), log.ToString());
             return 0;
         }
+
+        // --preview-image <file>: the intro's last frame (the brand alone on black) at 1280 x 640,
+        // the size GitHub shows for a repository's social preview (assets/github-preview.png).
+        public static int PreviewImage(string path)
+        {
+            using (var image = new Bitmap(1280, 640, PixelFormat.Format32bppRgb))
+            {
+                using (var g = Graphics.FromImage(image)) { g.Clear(Void); DrawBrand(g, image.Width, image.Height); }
+                image.Save(path, ImageFormat.Png);
+            }
+            return 0;
+        }
     }
 
     // A black, click-through window over the client area that fades out, so the

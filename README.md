@@ -1,5 +1,17 @@
 # Arabara
 
+![Arabara](assets/github-preview.png)
+
+So uhh I made a web browser with extreme optimizing ram, specially when running background applications.
+
+My original purpose when creating it was... to be able to play Valorant and Call Discord at the same time without overflowing RAM.
+
+I dont really recommend you to use this as a main browser because the features are very limited, for optimizing ram.
+
+So yes, you can download it here ---> **[[ DOWNLOAD ]](https://github.com/ruptav1/ArabaraWebBrowser/releases/latest)**
+
+---
+
 A lightweight Windows x64 browser with native WinForms controls, WebView2 and a charcoal/crimson retro-terminal interface.
 
 Download `Arabara-<version>.zip` from [Releases](https://github.com/ruptav1/ArabaraWebBrowser/releases), extract it and run **`Arabara.exe`** (nothing is installed). Keep its DLLs, `Arabara.exe.config` and `fonts` subfolder together. Requires Windows 10/11, .NET Framework 4.8 or later, and WebView2 Evergreen Runtime. The window always opens maximized. The tab strip doubles as the title bar: drag its empty space (or the logo) to move the window, double-click it to maximize or restore, right-click it for the system menu, and use the terminal-style minimize, maximize and close buttons at its right end. The standard Windows frame is kept for resizing, snapping, shadow and animations; only its caption is removed (`WM_NCCALCSIZE`). `--frame-test --no-intro` captures the real window to `test-results`.
@@ -140,7 +152,7 @@ Start-Process .\bin\Arabara.exe -ArgumentList '--smoke-test' -WindowStyle Hidden
 Start-Process .\bin\Arabara.exe -ArgumentList '--smoke-test','--reopen' -WindowStyle Hidden -Wait
 ```
 
-Run the smoke tests sequentially. `--smoke-test --intro` also runs the startup intro and checks that it is removed afterwards; `--intro-test` renders sample intro frames and their timing to `test-results`. They use `.test-profile` and write logs and UI snapshots to `test-results`, without opening the real account profile. The tests cover HTTPS-only navigation, history, preferences, cookies/localStorage after restart, foreground/background memory targets, background script/network activity, sleep/resume and mode-switch races. A silent media/canvas fixture also checks animation frame callbacks, a local WebRTC audio connection and data channel while rendering is paused. The hidden smoke window simulates focus states explicitly; it does not automate a real Discord session or desktop Alt+Tab. Resource readings are diagnostic samples, not a controlled benchmark or a promise of savings during voice calls.
+Run the smoke tests sequentially. `--smoke-test --intro` also runs the startup intro and checks that it is removed afterwards; `--intro-test` renders sample intro frames and their timing to `test-results`; `--preview-image assets\github-preview.png` renders the intro's last frame at 1280 x 640, the README banner and the GitHub social preview. They use `.test-profile` and write logs and UI snapshots to `test-results`, without opening the real account profile. The tests cover HTTPS-only navigation, history, preferences, cookies/localStorage after restart, foreground/background memory targets, background script/network activity, sleep/resume and mode-switch races. A silent media/canvas fixture also checks animation frame callbacks, a local WebRTC audio connection and data channel while rendering is paused. The hidden smoke window simulates focus states explicitly; it does not automate a real Discord session or desktop Alt+Tab. Resource readings are diagnostic samples, not a controlled benchmark or a promise of savings during voice calls.
 
 ### Public release
 

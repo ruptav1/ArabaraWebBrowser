@@ -46,6 +46,12 @@ namespace Arabara
                 try { return StartupIntro.RenderTest(SelfTests.ResultsRoot); }
                 finally { UiFonts.Shutdown(); }
             }
+            if (args.Contains("--preview-image"))
+            {
+                UiFonts.Initialize();
+                try { return StartupIntro.PreviewImage(Path.GetFullPath(args[Array.IndexOf(args, "--preview-image") + 1])); }
+                finally { UiFonts.Shutdown(); }
+            }
             bool smoke = args.Contains("--smoke-test");
             // The existing profile was moved intact during the Arabara rename.
             string dataRoot = smoke ? Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", ".test-profile") :
