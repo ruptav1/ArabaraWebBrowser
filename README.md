@@ -1,13 +1,13 @@
 Arabara
-
-
-
-
-
-
-
-
-
+.
+.
+.
+.
+.
+.
+.
+.
+.
 
 So uhh I made a web browser with extreme optimizing ram, specially when running background applications.
 
